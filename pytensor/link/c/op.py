@@ -352,7 +352,7 @@ class ExternalCOp(COp):
                 "be used at the same time."
             )
 
-        for func_file, code in zip(func_files, self.func_codes):
+        for func_file, code in zip(func_files, self.func_codes, strict=True):
             if self.backward_re.search(code):
                 # This is backward compat code that will go away in a while
 
